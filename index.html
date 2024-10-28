@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTS Energia Solar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function enviarWhatsApp(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        // Captura os dados do formulário
+        const nome = document.querySelector('input[name="nome"]').value;
+        const telefone = document.querySelector('input[name="telefone"]').value;
+        const email = document.querySelector('input[name="email"]').value;
+        const estado = document.querySelector('input[name="estado"]').value;
+        const cidade = document.querySelector('input[name="cidade"]').value;
+        const valorConta = document.querySelector('input[name="valor-conta"]').value;
+
+        // Cria a mensagem para o WhatsApp
+        const texto = encodeURIComponent(`Nome: ${nome}\nTelefone: ${telefone}\nE-mail: ${email}\nEstado: ${estado}\nCidade: ${cidade}\nValor da Conta: ${valorConta}`);
+
+        // Cria o link para o WhatsApp
+        const link = `https://wa.me/557192717631?text=${texto}`;
+        window.open(link, '_blank'); // Abre o WhatsApp com a mensagem pré-preenchida
+    }
+</script>
+</script>
+<script>
+    function scrollToForm() {
+        // Rola suavemente até a seção do formulário
+        document.getElementById("formulario-contato").scrollIntoView({ behavior: 'smooth' });
+        
+        // Espera o scroll terminar antes de focar no campo "Nome"
+        setTimeout(function() {
+            document.getElementById("nome").focus();
+        }, 500); // Tempo de espera em milissegundos, ajuste se necessário
+    }
+    </script>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="assets/logo_cts.1.png" alt="CTS Energia Solar">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#quem-somos">Sobre nós</a></li>
+                <li><a href="#formulario-contato">Orçamento</a></li>
+                <li><a href="#projetos-realizados">Projetos</a></li>
+                <a href="https://wa.me/557192717631" target="_blank" class="btn">Fale conosco</a>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Principal -->
+    <section id="home" class="banner">
+        <div class="banner-content">
+            <h1>Soluções em Energia Fotovoltaica</h1>
+            <p><span class="highlight">A CTS Energia Solar é uma empresa com experiência em energia solar.</span></p>
+            <button class="btn" onclick="scrollToForm()">Monte seu pré-projeto</button>
+    </div>
+</section>           
+            </div>
+        </div>
+    </section>
+<section id="beneficios" class="beneficios">
+    <h2>Benefícios da Energia Fotovoltaica</h2>
+    <div class="beneficios-container">
+        <div class="beneficio-item">
+            <img src="assets/economia.jpg" alt="Economia">
+            <h3>Economia</h3>
+            <p>A energia solar pode proporcionar uma redução significativa nas despesas com eletricidade, alcançando até 95%. Isso significa que, com o investimento em um sistema de energia solar, o retorno financeiro pode ocorrer em apenas alguns meses. No Brasil, a abundância de luz solar favorece a geração de energia, permitindo que muitos consumidores aproveitem ao máximo essa tecnologia.</p>
+        </div>
+        <div class="beneficio-item">
+            <img src="assets/valorizacao.jpg" alt="Valorização">
+            <h3>Valorização</h3>
+            <p>Estudos realizados por instituições renomadas, como o Laboratório Nacional Lawrence Berkeley nos Estados Unidos, indicam que propriedades equipadas com sistemas de energia fotovoltaica podem aumentar seu valor em 3% a 6%. Essa valorização representa um atrativo adicional para quem considera a instalação de painéis solares.</p>
+        </div>
+        <div class="beneficio-item">
+            <img src="assets/sustentabilidade.jpg" alt="Sustentabilidade">
+            <h3>Sustentabilidade</h3>
+            <p>A energia produzida por painéis solares é totalmente limpa, sem causar impactos ambientais adversos. Durante o processo de geração, não há emissão de poluentes que possam prejudicar o meio ambiente. Portanto, optar por energia solar significa escolher uma fonte de energia 100% sustentável.</p>
+        </div>
+    </div>
+</section>
+ <!-- Seção Soluções -->
+ <section id="solucoes" class="solucoes">
+    <div class="solucoes-container">
+        <div class="solucoes-texto">
+            <h2>Soluções</h2>
+            <p>Veja ao lado o funcionamento básico de um sistema de geração de eletricidade através da energia solar.</p>
+            <p>Os painéis solares captam a luz solar e transformam em corrente contínua, o inversor recebe esta energia e converte em corrente alternada na mesma frequência das nossas instalações. Essa energia gerada já é consumida automaticamente pelos aparelhos elétricos e o excedente é enviado à concessionária que através de um medidor bidirecional contabiliza como créditos toda a energia gerada.</p>
+            <h3>O Planeta Agradece</h3>
+            <p>A energia solar é limpa e livre de geração de gases de efeito estufa, os principais responsáveis pelas mudanças climáticas. Diferente da geração termoelétrica ou nuclear, onde gases e resíduos são gerados. Mesmo quando comparado com as hidrelétricas, que são fontes limpas de energia, a necessidade de desmatamento ou alagamento de grandes áreas traz grandes prejuízos ao meio ambiente.</p>
+        </div>
+        <div class="solucoes-imagem">
+            <img src="assets/solucoes_diagrama.png" alt="Funcionamento da Energia Solar">
+        </div>
+    </div>
+</section>
+ <!-- Seção Soluções -->
+ <section class="sequencia-projeto">
+    <h2>Sequência do projeto</h2>
+    <div class="steps-wrapper">
+        <!-- Primeira coluna de steps -->
+        <div class="steps-column">
+            <div class="step">
+                <div class="step-number">1</div>
+                <p>Análise das contas de energia.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <p>Dimensionamento e orçamento do sistema de energia solar.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <p>Visita técnica.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <p>Viabilização do pagamento (Consultoria gratuita pela CTS).</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <p>Homologação junto à concessionária.</p>
+            </div>
+        </div>
+        <!-- Segunda coluna de steps -->
+        <div class="steps-column">
+            <div class="step">
+                <div class="step-number">6</div>
+                <p>Instalação do Sistema de Energia Solar.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">7</div>
+                <p>Vistoria da Concessionária.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">8</div>
+                <p>Ligação do sistema.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">9</div>
+                <p>Acompanhamento em tempo real da sua geração.</p>
+            </div>
+        </div>
+    </div>
+    <button class="cta-button">Faça o orçamento agora!</button>
+</section>
+<!-- Seção Quem Somos -->
+<section id="quem-somos" class="quem-somos">
+    <div class="quem-somos-container">
+        <div class="logo-empresa">
+            <img src="assets/logo_cts.png" alt="CTS Energia Solar">
+        </div>
+        <div class="quem-somos-texto">
+            <h2>QUEM SOMOS</h2>
+            <p>A CTS Energia Solar é uma empresa nova, nascida da sólida experiência e expertise do grupo LOM, que atuou por mais de uma década no setor de engenharia. Fundada em 12 de junho de 2024, nossa missão é oferecer soluções inovadoras e sustentáveis ​​na área de energias renováveis, com um foco especial na instalação e manutenção de sistemas de energia solar.</p>
+            <p>Contamos com uma equipe de profissionais especializados, que trazem uma vasta experiência adquirida em diversos segmentos. Combinamos essa expertise com uma visão moderna e sustentável, comprometendo-nos a promover a transição para fontes de energia limpa e renovável.</p>
+            <p>Na CTS, pensamos que a gestão de pessoas, a inovação tecnológica e a qualidade são fundamentais para o nosso desenvolvimento. Estamos em constante evolução, buscando não apenas atender às expectativas de nossos clientes, mas superá-las, oferecendo um serviço personalizado e de alta qualidade.</p>
+            <p>Seja no setor público ou privado, nossa missão é fornecer soluções que contribuam para um futuro mais sustentável, ajudando nossos clientes a reduzir custos e aumentar a eficiência energética.</p>
+            <p>Junte-se a nós na construção de um mundo mais verde e sustentável.</p>
+        </div>
+    </div>
+</section>
+<!-- Seção Projetos Realizados -->
+<section id="projetos-realizados" class="projetos-realizados">
+    <div class="projetos-realizados-conteudo">
+        <h2>PROJETOS REALIZADOS</h2>
+        <p class="texto-principal">
+            <strong>+36</strong> instalações concluídas
+        </p>
+        <p class="texto-secundario">
+            Embora tenhamos apenas alguns meses de operação, a CTS Energia Solar já conta com mais de 36 instalações concluídas em toda a Bahia e região. Nosso compromisso com a qualidade e a satisfação do cliente nos permite oferecer soluções eficientes e sustentáveis, transformando o potencial solar em energia limpa e acessível para todos. Junte-se a nós e faça parte dessa revolução energética!
+        </p>
+    </div>
+</section>
+<!-- Seção de Preenchimento de Dados -->
+<section id="formulario-contato" class="formulario-contato">
+    <div class="formulario-container">
+        <h2>REDUZA SUA CONTA DE ENERGIA COM SISTEMA FOTOVOLTAICO E TENHA UMA ECONOMIA DE ATÉ 95%!</h2>
+        <p>Preencha os dados e entraremos em contato!</p>
+        <form action="" method="post" enctype="multipart/form-data" onsubmit="enviarWhatsApp(event)">
+            <input type="text" name="nome" placeholder="Nome *" required>
+            <input type="tel" name="telefone" placeholder="Telefone *" required>
+            <input type="email" name="email" placeholder="E-mail *" required>
+            <input type="text" name="estado" placeholder="Estado">
+            <input type="text" name="cidade" placeholder="Cidade">
+            <input type="text" name="valor-conta" placeholder="Valor médio da conta de luz">
+            <input type="file" name="anexo" placeholder="Anexo da conta de luz">
+            <input type="hidden" name="whatsapp" value="true">
+            <button type="submit">Enviar por WhatsApp</button>
+        </form>
+    </div>
+</section>
+<!-- Seção Rodapé -->
+<footer id="rodape" class="rodape">
+    <div class="rodape-container">
+        <div class="logo-endereco">
+            <img src="assets/logo_empresa.png" alt="Logo CTS Energia Solar">
+            <div class="endereco">
+                <p>CTS Energia Solar LTDA</p>
+                <p>CNPJ: 55.498.566/0001-87</p>
+                <p>Endereço: Avenida do Contorno, 105, Itamarati, Senhor do Bonfim - BA, 48.970-000</p>
+                <p>Telefone: (71) 9167-6502</p>
+                <p>E-mail: thiagomsolar@gmail.com</p>
+                <p>Data de Abertura: 12/06/2024</p>
+                <p>Situação Cadastral: Ativa</p>
+            </div>
+        </div>
+        <div class="links">
+            <p>Links Rápidos</p>
+            <ul>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Orçamento</a></li>
+                <li><a href="#">Projetos</a></li>
+            </ul>
+        </div>
+        <div class="contato">
+            <p>Entre em contato</p>
+            <p>Telefone: (71) 9167-6502</p>
+            <p>E-mail: thiagomsolar@gmail.com</p>
+        </div>
+    </div>
+</footer>
+</body>
+<!-- Seção Whatsapp -->
+</html>
+<a href="https://wa.me/557192717631" class="whatsapp-link" target="_blank">
+    <img src="assets/logo_wpp.png" alt="WhatsApp">
+</a>

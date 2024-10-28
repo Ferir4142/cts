@@ -1,0 +1,552 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0B132B; /* Fundo escuro para combinar com a página */
+    color: white;
+}
+/* Estilos de imagem */
+img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+/* Cabeçalho */
+header {
+    position: absolute;
+top: 0;
+left: 0;
+width: 90%; 
+    background-color: transparent; /* Fundo transparente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Ajuste específico para o botão Fale Conosco */
+.btn[href*="wa.me"] {
+    margin-top: -10px; /* Ajuste o valor conforme necessário */
+}
+
+
+.btn:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+  
+
+header .logo img {
+    height: 100px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transição suave para mudança de cor */
+}
+/* Mudança de cor ao passar o mouse nos links do menu */
+header nav ul li a:hover {
+    color: #ffa200; /* Cor ao passar o mouse */
+}
+/* Seção de Banner */
+.banner {
+    background-image: url('assets/solar_panels.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: justify;
+    padding-top: 100px;
+     font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    
+}
+.highlight {
+        color: #ffffff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+  
+.banner-content h1 {
+    font-size: 3rem;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+/* Estilo do botão com bordas arredondadas (balão) */
+button {
+    background-color: #0056b3;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px; /* Bordas arredondadas para o estilo de "balão" */
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+    transition: all 0.3s ease;
+}
+
+/* Mudança de cor ao passar o mouse nos botões */
+button:hover {
+    background-color: white; /* Cor de fundo ao passar o mouse */
+    color: #007BFF; /* Muda a cor do texto ao passar o mouse */
+    border: 2px solid #007BFF; /* Adiciona uma borda no hover */
+}
+.beneficios {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0B132B;
+    color: white;
+}
+
+.beneficios-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.beneficio-item {
+    background-color: #1C2541;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.beneficio-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+.beneficio-item h3 {
+    margin: 20px 0 10px 0;
+}
+
+.beneficio-item p {
+    font-size: 1rem;
+    color: #FFF;
+}
+/* Seção de Soluções */
+.solucoes {
+    padding: 50px 20px;
+    background-color: #141c3a;
+    color: white;
+}
+
+.solucoes-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Responsividade */
+    gap: 20px;
+    max-width: 1200px; /* Definir um limite para a largura máxima */
+    margin: 0 auto; /* Centralizar o container na tela */
+    /* Remover o text-align: right; para não desalinhar o texto */
+}
+
+.solucoes-texto {
+    max-width: 600px;
+    text-align: justify;
+}
+
+.solucoes-imagem img {
+    width: 100%; /* Ocupará toda a largura disponível do container */
+    max-width: 800px; /* Define um limite para não ficar muito grande */
+    height: auto; /* Mantém a proporção original da imagem */
+    border-radius: 10px;
+}
+
+.solucoes h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.solucoes p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.solucoes h3 {
+    color: #ffffff;
+    margin-top: 70px;
+}
+
+/* Tornar o layout responsivo */
+@media (max-width: 768px) {
+    .solucoes-container {
+        flex-direction: column; /* Em telas pequenas, empilhar os elementos */
+    }
+
+    .solucoes-texto, .solucoes-imagem {
+        max-width: 100%;
+    }
+}
+
+.banner-content h1 {
+    font-size: 2rem;
+}
+
+.banner-content p {
+    font-size: 1rem;
+}
+/* Seção de Sequência do Projeto */
+.sequencia-projeto {
+    padding: 50px 20px;
+    background: url('assets/background.jpg') no-repeat center center/cover; /* Corrigido */
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.sequencia-projeto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Estrutura das colunas lado a lado */
+.steps-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espaço entre as colunas */
+    flex-wrap: wrap; /* Faz as colunas se adaptarem em telas menores */
+}
+
+/* Estilos das colunas */
+.steps-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre cada step */
+}
+
+/* Estilo dos steps */
+.step {
+    background-color: rgba(28, 37, 65, 0.9); /* Fundo escuro com transparência */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* Estilo dos números */
+.step-number {
+    background-color: #0056b3;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+/* Estilo do texto das etapas */
+.step p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Estilo do botão */
+.cta-button {
+    background-color: #0056b3;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}/* Seção Quem Somos */
+.quem-somos {
+    padding: 60px 20px;
+    background-color: #0B132B; /* Fundo leve para diferenciar a seção */
+    color: #fbfcfd; /* Cor do texto */
+}
+
+.quem-somos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; /* Espaço entre o logo e o texto */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-empresa img {
+    width: 300px; /* Tamanho do logo */
+    height: auto;
+    border-radius: 10px; /* Borda arredondada para o logo */
+    box-shadow: 0 4px 15px rgba(150, 150, 150, 0.1); /* Adiciona uma sombra leve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+}
+
+.quem-somos-texto {
+    max-width: 700px;
+    text-align: justify;
+}
+
+.quem-somos h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.quem-somos p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .quem-somos-container {
+        flex-direction: column; /* Empilhar logo e texto em telas menores */
+        text-align: center;
+    }
+
+    .logo-empresa img {
+        width: 150px; /* Tamanho menor do logo em telas pequenas */
+    }
+
+    .quem-somos-texto {
+        max-width: 100%;
+    }
+}
+
+/* Seção Projetos Realizados */
+.projetos-realizados {
+    background-image: url('assets/imagem-projetos.jpeg'); /* Coloque a URL da sua imagem aqui */
+    background-size: cover; /* Cobre toda a área da seção */
+    background-position: center; /* Centraliza a imagem */
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.projetos-realizados::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Sombreamento escuro sobre a imagem */
+    z-index: 1;
+}
+
+.projetos-realizados-conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.projetos-realizados h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.texto-principal {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fffb00; /* Cor destacada para o +36 */
+    margin-bottom: 20px;
+}
+
+.texto-secundario {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-top: 20px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+/* Seção de Preenchimento de Dados */
+.formulario-contato {
+    padding: 50px 20px;
+    background: url('assets/fundosolar.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    min-height: 400px;
+}
+
+.formulario-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.formulario-contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.formulario-contato p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.formulario-contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-contato form input,
+.formulario-contato form button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+.formulario-contato form button {
+    background-color: #FF5C00;
+    color: white;
+    cursor: pointer;
+}
+
+.formulario-contato form button:hover {
+    background-color: #ff7a33;
+}
+/* Seção de Preenchimento de Dados com Overlay */
+.formulario-contato {
+    padding: 50px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('assets/seu-background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+
+    
+}
+/* Seção Rodapé */
+.rodape {
+    background-color: #141c3a; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 40px 20px; /* Espaçamento interno */
+    font-family: 'Arial', sans-serif; /* Fonte mais legível */
+}
+
+.rodape-container {
+    display: flex; /* Flexbox para layout */
+    justify-content: space-between; /* Espaçamento entre os elementos */
+    max-width: 1200px; /* Largura máxima do rodapé */
+    margin: 0 auto; /* Centraliza o rodapé */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.logo-endereco {
+    display: flex; /* Flexbox para a logo e endereço */
+    align-items: flex-start; /* Alinhamento no início */
+    gap: 20px; /* Espaçamento entre logo e endereço */
+}
+
+.logo-endereco img {
+    width: 150px; /* Largura da imagem */
+    height: auto; /* Altura automática para manter a proporção */
+}
+
+.endereco, .links, .contato {
+    font-size: 0.95rem; /* Tamanho da fonte */
+    line-height: 1; /* Altura da linha para melhor legibilidade */
+}
+
+.links {
+    flex: 1; /* Permite que a seção de links ocupe o espaço restante */
+}
+
+.links ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento */
+}
+
+.links ul li {
+    margin-bottom: 3px; /* Espaçamento entre os itens da lista */
+}
+
+.links ul li a {
+    color: white; /* Cor do texto do link */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s ease; /* Efeito suave na mudança de cor */
+}
+
+.links ul li a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+    color: #f39c12; /* Cor de destaque ao passar o mouse */
+}
+
+.contato {
+    flex: 1; /* Permite que a seção de contato ocupe o espaço restante */
+}
+
+@media (max-width: 768px) {
+    .rodape-container {
+        flex-direction: column; /* Coloca os itens em coluna em telas menores */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .logo-endereco {
+        justify-content: center; /* Centraliza logo e endereço */
+    }
+
+    .links, .contato {
+        margin-top: 20px; /* Espaçamento entre seções em telas menores */
+    }
+}
+/* Seção WPP */
+.whatsapp-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-link img {
+    width: 50px; /* Ajuste o tamanho do ícone */
+    height: 50px;
+    object-fit: contain; /* Garante que a imagem se ajuste dentro do contêiner */
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
