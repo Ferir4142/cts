@@ -2,15 +2,22 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
     background-color: #0B132B; /* Fundo escuro para combinar com a página */
     color: white;
 }
+html, body {
+    width: 100%;
+  }
+  .container {
+    width: 100%; /* Garantir que o container ocupe 100% da largura */
+    max-width: 100vw; /* Impedir que ultrapasse a largura da janela de visualização */
+  }
 /* Estilos de imagem */
-img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
+img, video {
+    max-width: 100%;
+    height: auto;
   }
   
 /* Cabeçalho */
@@ -23,7 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px;
     z-index: 100;
   }
   
@@ -53,17 +60,17 @@ header {
 }
   
 header .logo img {
-    height: 80px;
+    height: 130px;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    gap: 10px; /* Espaço entre os itens */
 }
 
 header nav ul li {
-    margin-right: 15px;
+    display: inline-block;
 }
 
 header nav ul li a {
@@ -76,6 +83,17 @@ header nav ul li a {
 /* Mudança de cor ao passar o mouse nos links do menu */
 header nav ul li a:hover {
     color: #ffa200; /* Cor ao passar o mouse */
+}
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px; /* Adiciona espaço entre os itens */
+    }
 }
 /* Seção de Banner */
 .banner {
@@ -233,83 +251,87 @@ button:hover {
 .banner-content p {
     font-size: 1rem;
 }
+
 /* Seção de Sequência do Projeto */
 .sequencia-projeto {
-    padding: 50px 20px;
-    background: url('assets/background.jpg') no-repeat center center/cover; /* Corrigido */
-    text-align: center;
-    color: white;
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  padding: 50px 20px;
+  background: url('assets/background.jpg') no-repeat center center/cover;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .sequencia-projeto h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
 }
 
 /* Estrutura das colunas lado a lado */
 .steps-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 50px; /* Espaço entre as colunas */
-    flex-wrap: wrap; /* Faz as colunas se adaptarem em telas menores */
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 /* Estilos das colunas */
 .steps-column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Espaço entre cada step */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 /* Estilo dos steps */
 .step {
-    background-color: rgba(28, 37, 65, 0.9); /* Fundo escuro com transparência */
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    color: white;
+  background-color: rgba(28, 37, 65, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  max-width: 300px;
 }
 
 /* Estilo dos números */
 .step-number {
-    background-color: #0056b3;
-    color: white;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    margin-right: 15px;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin-right: 10px;
+  aspect-ratio: 1; /* Mantém a proporção 1:1 */
 }
 
 /* Estilo do texto das etapas */
 .step p {
-    font-size: 1rem;
-    line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
+
 /* Responsividade */
 @media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .banner-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .solucoes-container, .beneficios-container, .steps-wrapper {
-        flex-direction: column;
-    }
-
-    .solucoes-imagem img, .logo-empresa img {
-        max-width: 100%;
-    }
+  .steps-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .step {
+    width: 100%;
+    max-width: 100%; /* Ocupa a largura total em telas menores */
+  }
+  .step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+  .step p {
+    font-size: 0.8rem;
+  }
 }
 
 /* Estilo do botão */
