@@ -149,7 +149,15 @@
             </div>
         </div>
     </div>
-    <button class="cta-button">Faça o orçamento agora!</button>
+    <!-- Botão de orçamento -->
+    <button class="cta-button" onclick="scrollToFormContato()">Faça o orçamento agora!</button>
+</section>
+<script>
+    function scrollToFormContato() {
+        // Rola suavemente até a seção do formulário
+        document.getElementById("formulario-contato").scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
 </section>
 <!-- Seção Quem Somos -->
 <section id="quem-somos" class="quem-somos">
@@ -183,8 +191,19 @@
             <input type="text" name="nome" placeholder="Nome *" required>
             <input type="tel" name="telefone" placeholder="Telefone *" required>
             <input type="email" name="email" placeholder="E-mail *" required>
-            <input type="text" name="estado" placeholder="Estado">
-            <input type="text" name="cidade" placeholder="Cidade">
+            
+            <!-- Input para Estado com sugestões -->
+            <div class="input-container">
+                <input type="text" name="estado" id="estado" placeholder="Digite o Estado *" required oninput="filtrarEstados()">
+                <div id="sugestoes-estados" class="sugestoes"></div>
+            </div>
+            
+            <!-- Input para Cidade com sugestões -->
+            <div class="input-container">
+                <input type="text" name="cidade" id="cidade" placeholder="Digite a Cidade *" required oninput="filtrarCidades()">
+                <div id="sugestoes-cidades" class="sugestoes"></div>
+            </div>
+            
             <input type="text" name="valor-conta" placeholder="Valor médio da conta de luz">
             <input type="file" name="anexo" placeholder="Anexo da conta de luz">
             <input type="hidden" name="whatsapp" value="true">
@@ -192,6 +211,80 @@
         </form>
     </div>
 </section>
+<script>
+    const estados = [
+        "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo",
+        "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", 
+        "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", 
+        "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"
+    ];
+
+    const cidadesPorEstado = {
+        "Acre": ["Rio Branco", "Sena Madureira", "Cruzeiro do Sul"],
+        "Alagoas": ["Maceió", "Arapiraca", "Palmeira dos Índios"],
+        "Amapá": ["Macapá", "Santana", "Laranjal do Jari"],
+        "Amazonas": ["Manaus", "Parintins", "Itacoatiara"],
+        "Bahia": ["Salvador", "Feira de Santana", "Vitória da Conquista", "Juazeiro", "Ilhéus"],
+        // Continue incluindo cidades para cada estado...
+    };
+
+    let cidadesFiltradas = [];
+    let estadosFiltrados = [];
+
+    function filtrarEstados() {
+        const input = document.getElementById("estado").value.toLowerCase();
+        const sugestoesDiv = document.getElementById("sugestoes-estados");
+
+        // Limpa as sugestões anteriores
+        sugestoesDiv.innerHTML = '';
+
+        if (input) {
+            estadosFiltrados = estados.filter(estado => estado.toLowerCase().includes(input));
+
+            estadosFiltrados.forEach(estado => {
+                const div = document.createElement("div");
+                div.textContent = estado;
+                div.className = "sugestao";
+                div.onclick = () => selecionarEstado(estado);
+                sugestoesDiv.appendChild(div);
+            });
+        }
+    }
+
+    function selecionarEstado(estado) {
+        const estadoInput = document.getElementById("estado");
+        estadoInput.value = estado;
+        document.getElementById("sugestoes-estados").innerHTML = ''; // Limpa sugestões
+        cidadesFiltradas = cidadesPorEstado[estado] || []; // Atualiza as cidades filtradas
+    }
+
+    function filtrarCidades() {
+        const input = document.getElementById("cidade").value.toLowerCase();
+        const sugestoesDiv = document.getElementById("sugestoes-cidades");
+
+        // Limpa as sugestões anteriores
+        sugestoesDiv.innerHTML = '';
+
+        if (input) {
+            const sugestoes = cidadesFiltradas.filter(cidade => cidade.toLowerCase().includes(input));
+
+            sugestoes.forEach(cidade => {
+                const div = document.createElement("div");
+                div.textContent = cidade;
+                div.className = "sugestao";
+                div.onclick = () => selecionarCidade(cidade);
+                sugestoesDiv.appendChild(div);
+            });
+        }
+    }
+
+    function selecionarCidade(cidade) {
+        const cidadeInput = document.getElementById("cidade");
+        cidadeInput.value = cidade;
+        document.getElementById("sugestoes-cidades").innerHTML = ''; // Limpa sugestões
+    }
+</script>
+
 <!-- Seção Rodapé -->
 <footer id="rodape" class="rodape">
     <div class="rodape-container">
