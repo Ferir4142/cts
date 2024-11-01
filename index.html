@@ -92,7 +92,7 @@
     <div class="solucoes-container">
         <div class="solucoes-texto">
             <h2>Soluções</h2>
-            <p>Veja ao lado o funcionamento básico de um sistema de geração de eletricidade através da energia solar.</p>
+            <p>Veja na imagem o funcionamento básico de um sistema de geração de eletricidade através da energia solar.</p>
             <p>Os painéis solares captam a luz solar e transformam em corrente contínua, o inversor recebe esta energia e converte em corrente alternada na mesma frequência das nossas instalações. Essa energia gerada já é consumida automaticamente pelos aparelhos elétricos e o excedente é enviado à concessionária que através de um medidor bidirecional contabiliza como créditos toda a energia gerada.</p>
             <h3>O Planeta Agradece</h3>
             <p>A energia solar é limpa e livre de geração de gases de efeito estufa, os principais responsáveis pelas mudanças climáticas. Diferente da geração termoelétrica ou nuclear, onde gases e resíduos são gerados. Mesmo quando comparado com as hidrelétricas, que são fontes limpas de energia, a necessidade de desmatamento ou alagamento de grandes áreas traz grandes prejuízos ao meio ambiente.</p>
@@ -176,115 +176,63 @@
     <div class="projetos-realizados-conteudo">
         <h2>PROJETOS REALIZADOS</h2>
         <p class="texto-principal">
-            <strong>+36</strong> instalações concluídas
+            <strong>+36</strong> instalações concluídas e em operação
         </p>
         <p class="texto-secundario">
-            <p>A CTS Energia Solar já conta com mais de 36 instalações concluídas em toda a Bahia e região. Nosso compromisso com a qualidade e a satisfação do cliente nos permite oferecer soluções eficientes e sustentáveis, transformando o potencial solar em energia limpa e acessível para todos. Junte-se a nós e faça parte dessa revolução energética!</p>
+            <p>A CTS Energia Solar já conta com mais de 36 instalações concluídas em toda a Bahia e região. Nosso compromisso com a qualidade e a satisfação do cliente nos permite oferecer soluções eficientes e sustentáveis, transformando o potencial solar em energia limpa e acessível para todos. Junte-se a nós e faça parte dessa revolução energética!
+            </p>
     </div>
 </section>
-<!-- Seção de Preenchimento de Dados -->
-<section id="formulario-contato" class="formulario-contato">
-    <div class="formulario-container">
-        <h2>REDUZA SUA CONTA DE ENERGIA COM SISTEMA FOTOVOLTAICO E TENHA UMA ECONOMIA DE ATÉ 95%!</h2>
-        <p>Preencha os dados e entraremos em contato!</p>
-        <form action="" method="post" enctype="multipart/form-data" onsubmit="enviarWhatsApp(event)">
-            <input type="text" name="nome" placeholder="Nome *" required>
-            <input type="tel" name="telefone" placeholder="Telefone *" required>
-            <input type="email" name="email" placeholder="E-mail *" required>
-            
-            <!-- Input para Estado com sugestões -->
-            <div class="input-container">
-                <input type="text" name="estado" id="estado" placeholder="Digite o Estado *" required oninput="filtrarEstados()">
-                <div id="sugestoes-estados" class="sugestoes"></div>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário de Contato</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Seção de Preenchimento de Dados -->
+        <section id="formulario-contato" class="formulario-contato">
+            <div class="formulario-container">
+                <h2>REDUZA SUA CONTA DE ENERGIA COM SISTEMA FOTOVOLTAICO E TENHA UMA ECONOMIA DE ATÉ 95%!</h2>
+                <p>Preencha os dados e entraremos em contato!</p>
+                <form action="" method="post" enctype="multipart/form-data" onsubmit="enviarWhatsApp(event)">
+                    <input type="text" name="nome" placeholder="Nome *" required>
+                    <input type="tel" name="telefone" placeholder="Telefone *" required>
+                    <input type="email" name="email" placeholder="E-mail *" required>
+                    
+                    <!-- Input para Estado com sugestões -->
+                    <div class="input-container">
+                        <input type="text" name="estado" id="estado" placeholder="Digite o Estado *" required autocomplete="off" oninput="filtrarEstados()">
+                        <div id="sugestoes-estados" class="sugestoes"></div>
+                    </div>
+                    
+                    <!-- Input para Cidade com sugestões -->
+                    <div class="input-container">
+                        <input type="text" name="cidade" id="cidade" placeholder="Digite a Cidade *" required autocomplete="off" oninput="filtrarCidades()">
+                        <div id="sugestoes-cidades" class="sugestoes"></div>
+                    </div>
+                    
+                    <input type="text" name="valor-conta" placeholder="Valor médio da conta de luz">
+                    <input type="file" name="anexo" placeholder="Anexo da conta de luz">
+                    <input type="hidden" name="whatsapp" value="true">
+                    <button type="submit">Enviar por WhatsApp</button>
+                </form>
             </div>
-            
-            <!-- Input para Cidade com sugestões -->
-            <div class="input-container">
-                <input type="text" name="cidade" id="cidade" placeholder="Digite a Cidade *" required oninput="filtrarCidades()">
-                <div id="sugestoes-cidades" class="sugestoes"></div>
-            </div>
-            
-            <input type="text" name="valor-conta" placeholder="Valor médio da conta de luz">
-            <input type="file" name="anexo" placeholder="Anexo da conta de luz">
-            <input type="hidden" name="whatsapp" value="true">
-            <button type="submit">Enviar por WhatsApp</button>
-        </form>
-    </div>
-</section>
-<script>
-    const estados = [
-        "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo",
-        "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", 
-        "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", 
-        "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"
-    ];
-
-    const cidadesPorEstado = {
-        "Acre": ["Rio Branco", "Sena Madureira", "Cruzeiro do Sul"],
-        "Alagoas": ["Maceió", "Arapiraca", "Palmeira dos Índios"],
-        "Amapá": ["Macapá", "Santana", "Laranjal do Jari"],
-        "Amazonas": ["Manaus", "Parintins", "Itacoatiara"],
-        "Bahia": ["Salvador", "Feira de Santana", "Vitória da Conquista", "Juazeiro", "Ilhéus"],
-        // Continue incluindo cidades para cada estado...
-    };
-
-    let cidadesFiltradas = [];
-    let estadosFiltrados = [];
-
-    function filtrarEstados() {
-        const input = document.getElementById("estado").value.toLowerCase();
-        const sugestoesDiv = document.getElementById("sugestoes-estados");
-
-        // Limpa as sugestões anteriores
-        sugestoesDiv.innerHTML = '';
-
-        if (input) {
-            estadosFiltrados = estados.filter(estado => estado.toLowerCase().includes(input));
-
-            estadosFiltrados.forEach(estado => {
-                const div = document.createElement("div");
-                div.textContent = estado;
-                div.className = "sugestao";
-                div.onclick = () => selecionarEstado(estado);
-                sugestoesDiv.appendChild(div);
-            });
-        }
-    }
-
-    function selecionarEstado(estado) {
-        const estadoInput = document.getElementById("estado");
-        estadoInput.value = estado;
-        document.getElementById("sugestoes-estados").innerHTML = ''; // Limpa sugestões
-        cidadesFiltradas = cidadesPorEstado[estado] || []; // Atualiza as cidades filtradas
-    }
-
-    function filtrarCidades() {
-        const input = document.getElementById("cidade").value.toLowerCase();
-        const sugestoesDiv = document.getElementById("sugestoes-cidades");
-
-        // Limpa as sugestões anteriores
-        sugestoesDiv.innerHTML = '';
-
-        if (input) {
-            const sugestoes = cidadesFiltradas.filter(cidade => cidade.toLowerCase().includes(input));
-
-            sugestoes.forEach(cidade => {
-                const div = document.createElement("div");
-                div.textContent = cidade;
-                div.className = "sugestao";
-                div.onclick = () => selecionarCidade(cidade);
-                sugestoesDiv.appendChild(div);
-            });
-        }
-    }
-
-    function selecionarCidade(cidade) {
-        const cidadeInput = document.getElementById("cidade");
-        cidadeInput.value = cidade;
-        document.getElementById("sugestoes-cidades").innerHTML = ''; // Limpa sugestões
-    }
-</script>
-
+        </section>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
 <!-- Seção Rodapé -->
 <footer id="rodape" class="rodape">
     <div class="rodape-container">

@@ -29,24 +29,28 @@ header {
     top: 0;
     left: 0;
     width: 100%; 
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo branco transparente para destacar o logo */
     background-color: transparent; /* Fundo transparente */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 15px 25px;
     z-index: 100;
-    transform: translateX(-25px); /* Desloca o cabeçalho levemente para a esquerda */
+    transform: translateX(-40px); /* Desloca o cabeçalho levemente para a esquerda */
   }
   
   .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #007bff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     text-align: center;
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    text-align: center;
+ 
 }
 
 .btn:hover {
@@ -55,7 +59,7 @@ header {
 
 /* Ajuste específico para o botão Fale Conosco */
 .btn[href*="wa.me"] {
-    margin-top: -10px; /* Ajuste o valor conforme necessário */
+    margin-top: -13px; /* Ajuste o valor conforme necessário */
 }
 
 
@@ -64,8 +68,14 @@ header {
 }
   
 header .logo img {
-    height: 150px;
-    margin-right: 10px; /* Ajuste conforme necessário */
+    width: 250px; /* Tamanho do logo */
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco para contraste */
+    background-color: rgba(255. 255. 255. 0.8);
+    border-radius: 8px; 
+    padding: 1px;
+    margin-left: 30px; /* Move o logo um pouco para a direita */
 }
 
 
@@ -264,6 +274,7 @@ button:hover {
 .solucoes h3 {
     color: #ffffff;
     margin-top: 70px;
+    font-size: 2.5rem
 }
 
 /* Tornar o layout responsivo */
@@ -325,29 +336,29 @@ button:hover {
   color: white;
   max-width: 300px;
   width: 300px; /* Define uma largura fixa */
-  min-height: 80px; /* Define uma altura mínima para padronizar o tamanho */
+  min-height: 90px; /* Define uma altura mínima para padronizar o tamanho */
   box-sizing: border-box; /* Garante que padding não afete a largura total */
 }
 
 /* Estilo dos números */
 .step-number {
-  background-color: #0056b3;
-  color: white;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  margin-right: 10px;
-  aspect-ratio: 1; /* Mantém a proporção 1:1 */
-}
+    background-color: #0056b3;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-right: 10px;
+    aspect-ratio: 1;
+  }
 
 /* Estilo do texto das etapas */
 .step p {
   font-size: 0.9rem;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 
@@ -407,10 +418,13 @@ button:hover {
 .logo-empresa img {
     width: 300px; /* Tamanho do logo */
     height: auto;
-    border-radius: 10px; /* Borda arredondada para o logo */
-    box-shadow: 0 4px 15px rgba(150, 150, 150, 0.1); /* Adiciona uma sombra leve */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco para contraste */
+    background-color: rgba(255. 255. 255. 0.8);
+    border-radius: 8px; 
+    padding: 1px;
 }
+
 
 .quem-somos-texto {
     max-width: 700px;
@@ -601,7 +615,13 @@ button:hover {
 .logo-endereco img {
     width: 150px; /* Largura da imagem */
     height: auto; /* Altura automática para manter a proporção */
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco para contraste */
+    background-color: rgba(255. 255. 255. 0.8);
+    border-radius: 8px; 
+    padding: 1px;
 }
+
 
 .endereco, .links, .contato {
     font-size: 0.95rem; /* Tamanho da fonte */
