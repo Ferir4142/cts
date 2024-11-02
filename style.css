@@ -68,7 +68,7 @@ header {
 }
   
 header .logo img {
-    width: 250px; /* Tamanho do logo */
+    width: 180px; /* Tamanho do logo */
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s;
     background-color: rgba(255, 255, 255, 0.8); /* Fundo branco para contraste */
@@ -77,7 +77,17 @@ header .logo img {
     padding: 1px;
     margin-left: 30px; /* Move o logo um pouco para a direita */
 }
+@media (max-width: 768px) {
+    header .logo img {
+        height: 60px; /* Reduz o tamanho do logo em telas menores */
+        margin-left: 10px; /* Ajusta o espaçamento para centralizar melhor */
+    }
 
+    .frase {
+        font-size: 16px; /* Diminui o tamanho da fonte */
+        margin-top: 5px; /* Ajusta o espaçamento superior */
+    }
+}
 
 header nav ul {
     list-style: none;
@@ -262,7 +272,7 @@ button:hover {
 }
 
 .solucoes h2 {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     margin-bottom: 20px;
 }
 
@@ -274,7 +284,7 @@ button:hover {
 .solucoes h3 {
     color: #ffffff;
     margin-top: 70px;
-    font-size: 2.5rem
+    font-size: 2.1rem
 }
 
 /* Tornar o layout responsivo */
